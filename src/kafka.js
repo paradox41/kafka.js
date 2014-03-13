@@ -19,7 +19,6 @@
 
             // And swap it with the current element.
             t = array[m].href;
-            console.log('t',t);
             array[m].href = array[i].href;
             array[i].href = t;
         }
