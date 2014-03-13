@@ -8,7 +8,7 @@
     }
 
     // Fisher-Yates shuffle courtesy of http://bost.ocks.org/mike/shuffle/
-    Kafka.prototype.shuffle = function(array, callback) {
+    Kafka.prototype.shuffle = function(array) {
         var m = array.length, t, i;
 
         // While there remain elements to shuffle…
