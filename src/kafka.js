@@ -1,4 +1,5 @@
-/* jshint define: true, alert: true */
+/* global define: true, alert: true */
+/* jshint loopfunc: true */
 (function(document) {
     'use strict';
 
