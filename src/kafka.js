@@ -1,4 +1,4 @@
-/* global define: true, alert: true */
+/* global define: true */
 /* jshint loopfunc: true */
 (function(document) {
     'use strict';
@@ -18,10 +18,9 @@
     }
 
     function Kafka() {
-        this.anchors = document.getElementsByTagName('a');
+        this.anchors = document.querySelectorAll('a');
 
         this.shuffle(this.anchors);
-        this.possibleNews(this.anchors);
     }
 
     // Fisher-Yates shuffle courtesy of http://bost.ocks.org/mike/shuffle/
@@ -41,21 +40,6 @@
         }
 
         return array;
-    };
-
-    Kafka.prototype.possibleNews = function(array) {
-
-        for (var i = 0; i < array.length; i++) {
-            var random = Math.random();
-            var anchor = array[i];
-
-            if (random < 0.1) {
-                anchor.addEventListener('click', function(event) {
-                    alert(quotes[getRandomInteger(0, quotes.length)]);
-                    event.preventDefault();
-                });
-            }
-        }
     };
 
     // CommonJS module
